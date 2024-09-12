@@ -44,7 +44,7 @@ const OUTPUT_DIRECTORY = 'output';
             });
             payload = payload.concat(results);
         }
-        console.log('Outputing file...')
+        console.log('Outputing file...');
         if (!fs.existsSync(OUTPUT_DIRECTORY)) fs.mkdirSync(OUTPUT_DIRECTORY);
         const csvWriter = createObjectCsvWriter({
             path: `${OUTPUT_DIRECTORY}/${Date.now()}-output.csv`,
@@ -61,6 +61,6 @@ const OUTPUT_DIRECTORY = 'output';
     } finally {
         await page.close();
         await browser.close();
-        console.log('Finished!')
+        console.log('Finished!');
     }
 })()
