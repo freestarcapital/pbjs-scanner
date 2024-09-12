@@ -24,7 +24,7 @@ const OUTPUT_DIRECTORY = 'output';
         for (let url of urls) { // loop urls
             console.log(`Loading ${url}...`);
             await page.goto(url); // goto page
-            const results = await page.evaluate(async () => { // get page aprameters
+            const results = await page.evaluate(async () => { // get page params
 
                 const sleep = ms => new Promise(res => setTimeout(res, ms));
                 await sleep((1000 * 60) * .25); // wait for page to load
