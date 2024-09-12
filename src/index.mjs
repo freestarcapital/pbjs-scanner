@@ -6,7 +6,7 @@ import { createObjectCsvWriter } from 'csv-writer';
 
 import { getCmdLineVars } from './utils.mjs';
 
-const OUTPUT_DIRECTORY ='output';
+const OUTPUT_DIRECTORY = 'output';
 
 (async () => {
     const browser = await puppeteer
@@ -44,7 +44,7 @@ const OUTPUT_DIRECTORY ='output';
             });
             payload = payload.concat(results);
         }
-        console.log(`Outputing file...`)
+        console.log('Outputing file...')
         if (!fs.existsSync(OUTPUT_DIRECTORY)) fs.mkdirSync(OUTPUT_DIRECTORY);
         const csvWriter = createObjectCsvWriter({
             path: `${OUTPUT_DIRECTORY}/${Date.now()}-output.csv`,
