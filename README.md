@@ -6,3 +6,5 @@ Run the following command:
 `node src/index.mjs ---urls=URLS` 
 
 URLS should be a comma seperated list of URLs
+
+A CSV file will be created in `/output`
